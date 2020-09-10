@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UILayoutTest</string>
+    <string name="btn1">Btn1</string>
+    <string name="btn2">Btn2</string>
+    <string name="btn3">btn3</string>
+    <string name="type_hint">Type Something</string>
+</resources>
