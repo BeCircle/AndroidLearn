@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ChatTest</string>
+    <string name="input_hint">输入</string>
+    <string name="send_hent">发送</string>
+</resources>
