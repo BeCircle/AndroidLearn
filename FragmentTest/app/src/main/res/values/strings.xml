@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FragmentTest</string>
+    <string name="another_right_fragment">这是另一个右侧fragment</string>
+    <string name="right_fragment">这是右侧碎片</string>
+</resources>
