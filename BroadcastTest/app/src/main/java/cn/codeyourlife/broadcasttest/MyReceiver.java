@@ -11,6 +11,7 @@ public class MyReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.d(TAG, "onReceive: ");
-        Toast.makeText(context, "收到收到", Toast.LENGTH_LONG).show();
+        Toast.makeText(context, "收到收到", Toast.LENGTH_SHORT).show();
+        abortBroadcast();
     }
 }
