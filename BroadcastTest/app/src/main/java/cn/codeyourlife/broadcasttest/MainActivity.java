@@ -1,6 +1,12 @@
 package cn.codeyourlife.broadcasttest;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -20,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private NetworkChangeReceiver networkChangeReceiver;
     private static final String TAG = "MainActivity";
 
+    private MutableLiveData<String> liveData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +46,20 @@ public class MainActivity extends AppCompatActivity {
         MyReceiver receiver = new MyReceiver();
         registerReceiver(receiver, intent2);
 
+        // 创建更新UI的观察者
+        final Observer<String> observer = new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable final String newName) {
+                // 更新UI
+                Log.d(TAG, "observe: liveData change");
+                Toast.makeText(MainActivity.this, "LiveData change", Toast.LENGTH_SHORT).show();
+            }
+        };
+
+        // liveData替代localBroadCast
+        liveData = new MutableLiveData<String>();
+        liveData.observe(this, observer);
+
         Button button = (Button) findViewById(R.id.click_me);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,8 +71,9 @@ public class MainActivity extends AppCompatActivity {
 //                ComponentName componentName = new ComponentName(MainActivity.this,MyReceiver.class);
 //                intent.setComponent(componentName);
 
-
                 sendOrderedBroadcast(intent,null);
+
+                liveData.setValue("12");
             }
         });
 
