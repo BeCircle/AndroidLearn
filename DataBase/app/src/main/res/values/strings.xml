@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DataBase</string>
+    <string name="create_db">创建数据库</string>
+    <string name="insert">插入一条记录</string>
+    <string name="query">查询所有数据</string>
+    <string name="no_record">没有任何数据</string>
+    <string name="delete">删除一组数据</string>
+    <string name="update">更新数据</string>
+</resources>
