@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Notification</string>
+    <string name="send">发送信息</string>
+    <string name="advertisement">这是个广告</string>
+</resources>
