@@ -11,9 +11,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class MainActivity extends AppCompatActivity {
     private DBHelper dbHelper;
-    public static final String DB_BOOK = "BookStore.db";
     private TextView showTable;
 
     @Override
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // db helper
-        this.dbHelper = new DBHelper(this, DB_BOOK, null, 2);
+        this.dbHelper = new DBHelper(this, DBHelper.DB_BOOK, null, 2);
         this.showTable = (TextView) findViewById(R.id.show_table);
 
         // button create

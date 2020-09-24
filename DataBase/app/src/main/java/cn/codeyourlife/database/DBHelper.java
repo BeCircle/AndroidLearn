@@ -8,8 +8,11 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
+    public static final String DB_BOOK = "BookStore.db";
+
     public static final String TB_Book = "Book";
     public static final String TB_Category = "Category";
+
     public static final String CREATE_BOOK = "create table "+TB_Book+" (" +
             "id integer primary key autoincrement, " +
             "author text, " +
@@ -33,7 +36,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(CREATE_BOOK);
         sqLiteDatabase.execSQL(CREATE_CATEGORY);
-        Toast.makeText(context, "Create succeeded", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(context, "Create succeeded", Toast.LENGTH_SHORT).show();
     }
 
     @Override

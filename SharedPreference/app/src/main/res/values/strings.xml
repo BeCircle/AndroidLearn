@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SharedPreference</string>
+    <string name="save">保存数据</string>
+</resources>
