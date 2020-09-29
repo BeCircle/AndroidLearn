@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Service</string>
+    <string name="start">启动服务</string>
+    <string name="svc_stop">停止服务</string>
+    <string name="svc_bind">绑定服务</string>
+    <string name="svc_unbind">解绑服务</string>
+    <string name="intent_svc">启动intent服务</string>
+</resources>
