@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ServiceBestPractice</string>
+    <string name="dl_start">开始下载</string>
+    <string name="dl_pause">暂停下载</string>
+    <string name="dl_cancel">取消下载</string>
+</resources>
