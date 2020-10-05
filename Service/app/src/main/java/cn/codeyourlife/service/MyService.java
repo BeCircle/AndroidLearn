@@ -15,7 +15,7 @@ import android.util.Log;
 import androidx.core.app.NotificationCompat;
 
 public class MyService extends Service {
-    private static final String TAG = "MyService";
+    private static final String TAG = "wbq812 MyService";
     private DownloadBinder mBinder = new DownloadBinder();
 
     public MyService() {
@@ -23,8 +23,16 @@ public class MyService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
+        Log.d(TAG, "onBind: ");
         return mBinder;
     }
+
+    @Override
+    public boolean onUnbind(Intent intent) {
+        Log.d(TAG, "onUnbind: ");
+        return super.onUnbind(intent);
+    }
+
 
     @Override
     public void onCreate() {
@@ -65,6 +73,7 @@ public class MyService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(TAG, "onStartCommand: ");
+        int a = 1/0;
         return super.onStartCommand(intent, flags, startId);
     }
 

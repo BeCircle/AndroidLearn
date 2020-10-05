@@ -12,20 +12,22 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "wbq812 MainActivity";
 
     private MyService.DownloadBinder downloadBinder;
     private ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+            Log.d(TAG, "onServiceConnected: ");
             downloadBinder = (MyService.DownloadBinder) iBinder;
             downloadBinder.startDownload();
             downloadBinder.getProgress();
         }
 
+        // 取消绑定不会调用，异常退出才会调用
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
-
+            Log.d(TAG, "onServiceDisconnected: ");
         }
     };
 
