@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LBS</string>
+    <string name="location">等待获取位置</string>
+</resources>

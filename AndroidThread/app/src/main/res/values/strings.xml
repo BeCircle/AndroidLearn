@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidThread</string>
+    <string name="change">修改内容</string>
+    <string name="hello">hello world</string>
+</resources>
